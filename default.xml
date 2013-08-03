@@ -5,6 +5,13 @@
            fetch="https://android.googlesource.com"
            review="https://android-review.googlesource.com/" />
 
+  <remote  name="cm"
+           fetch="https://github.com/CyanogenMod/"
+           review="review.cyanogenmod.com" />
+
+  <remote  name="rootbox"
+     fetch="https://github.com/Root-Box/" />
+
   <remote  name="github"
            fetch="https://github.com"
            review="http://gerrit.androidninjas.com:8181/"
@@ -34,6 +41,9 @@
   <project path="dalvik" name="ParanoidAndroid/android_dalvik" remote="github" revision="jellybean" />
   <project path="development" name="platform/development" />
   <project path="device/common" name="CyanogenMod/android_device_common" remote="github" revision="cm-10.1" />
+  <project path="device/samsung/i9100" name="android_device_samsung_i9100" remote="cm" revision="cm-10.1" />
+  <project path="device/samsung/galaxys2-common" name="android_device_samsung_galaxys2-common" remote="cm" revision="cm-10.1" />
+  <project path="device/samsung/smdk4412-common" name="device_samsung_smdk4412-common" remote="rootbox" revision="jb-mr1" />
   <project path="device/google/accessory/arduino" name="device/google/accessory/arduino" groups="device" />
   <project path="device/google/accessory/demokit" name="device/google/accessory/demokit" groups="device" />
   <project path="device/sample" name="device/sample" />
@@ -68,7 +78,7 @@
   <project path="external/dnsmasq" name="platform/external/dnsmasq" />
   <project path="external/doclava" name="ParanoidAndroid/android_external_doclava" remote="github" revision="jellybean" />
   <project path="external/dropbear" name="platform/external/dropbear" />
-  <project path="external/e2fsprogs" name="ParanoidAndroid/android_external_e2fsprogs" remote="github" revision="jellybean" />
+  <project name="CyanogenMod/android_external_e2fsprogs" path="external/e2fsprogs" remote="github" revision="cm-10.1" />
   <project path="external/easymock" name="platform/external/easymock" />
   <project path="external/eclipse-basebuilder" name="platform/external/eclipse-basebuilder" />
   <project path="external/eclipse-windowbuilder" name="platform/external/eclipse-windowbuilder" />
@@ -229,14 +239,17 @@
   <project path="hardware/libhardware" name="CyanogenMod/android_hardware_libhardware" remote="github" revision="cm-10.1" />
   <project path="hardware/libhardware_legacy" name="CyanogenMod/android_hardware_libhardware_legacy" remote="github" revision="cm-10.1" />
   <project path="hardware/ril" name="CyanogenMod/android_hardware_ril" remote="github" revision="cm-10.1" />
+  <project path="hardware/samsung" name="android_hardware_samsung" remote="cm" revision="cm-10.1" />
   <project path="hardware/samsung_slsi/exynos5" name="platform/hardware/samsung_slsi/exynos5" revision="refs/tags/android-4.2.1_r1.2" />
   <project path="hardware/ti/omap3" name="platform/hardware/ti/omap3" revision="refs/tags/android-4.2.1_r1.2" />
   <project path="hardware/ti/omap4xxx" name="platform/hardware/ti/omap4xxx" revision="refs/tags/android-4.2.1_r1.2" />
   <project path="hardware/ti/wlan" name="platform/hardware/ti/wlan" revision="refs/tags/android-4.2.1_r1.2" />
-  <project path="hardware/ti/wpan" name="platform/hardware/ti/wpan" revision="refs/tags/android-4.2.1_r1.2" />
+  <project path="hardware/ti/wpan" name="platform/hardware/ti/wpan" revision="refs/tags/android-4.2.1_r1.2" /> 	
+  <project path="kernel/samsung/smdk4412" name="kernel_samsung_smdk4412" remote="rootbox" revision="jb-mr1" />	  
   <project path="libcore" name="ParanoidAndroid/android_libcore" remote="github" revision="jellybean" />
   <project path="libnativehelper" name="platform/libnativehelper" />
   <project path="ndk" name="platform/ndk" />
+  <project path="packages/apps/HALO" name="ParanoidAndroid/HALO" remote="github" revision="jellybean" />
   <project path="packages/apps/BasicSmsReceiver" name="platform/packages/apps/BasicSmsReceiver" />
   <project path="packages/apps/Bluetooth" name="platform/packages/apps/Bluetooth" />
   <project path="packages/apps/Browser" name="ParanoidAndroid/android_packages_apps_Browser" remote="github" revision="jellybean" />
@@ -327,9 +340,10 @@
   <project path="system/media" name="platform/system/media" />
   <project path="system/netd" name="platform/system/netd" />
   <project path="system/security" name="platform/system/security" remote="aosp" revision="66702f7263eb7e30a4596135bb18443997bc24cf"  />
-  <project path="system/vold" name="platform/system/vold" />
+  <project path="system/vold" name="CyanogenMod/android_system_vold" remote="github" revision="cm-10.1" />
   <project path="tools/build" name="platform/tools/build" groups="toolsbuild" />
   <project path="tools/motodev" name="platform/tools/motodev" />
+  <project path="vendor/samsung" name="vendor_samsung" remote="rootbox" revision="jb-mr1" />
   <project path="vendor/pa" name="ParanoidAndroid/android_vendor_pa" remote="github" revision="jellybean-legacy" />
 
   <project path="paranoid" name="ParanoidAndroid/paranoid" remote="github" revision="jellybean" >
